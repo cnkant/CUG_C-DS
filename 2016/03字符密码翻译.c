@@ -1,3 +1,5 @@
+//将第i个字母变成第26-i+1个字母，非字母字符不变
+
 #include <stdio.h>
 #include <stdlib.h>
 int main()
@@ -5,7 +7,7 @@ int main()
     int i,j;
     char c,str[100];
     gets(str);
-    printf("����Ϊ��%s\n",str);
+    printf("ÃÜÂëÎª£º%s\n",str);
     for(i=0;i<=strlen(str);i++)
     {
         if(str[i]>='A'&&str[i]<='Z')
@@ -21,6 +23,6 @@ int main()
             str[i]=c;
         }
     }
-    printf("ԭ��Ϊ��%s\n",str);
+    printf("Ô­ÎÄÎª£º%s\n",str);
     return 0;
 }

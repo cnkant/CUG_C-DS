@@ -64,7 +64,7 @@ void print(struct student *stu)
     printf("\n按照平均成绩从高到低排序后的结果如下：\n");
     for(int i=0;i<n;i++)
     {
-        printf("学号：%-15s 姓名：%-10s成绩1：%-5.1f成绩2：%-5.1f成绩三：%-5.1f平均分：%-5.2lf\n",q->num,q->name,q->score[0],q->score[1],(*q).score[2],q->aver);
+        printf("学号：%-15s 姓名：%-10s成绩1：%-5.1f成绩2：%-5.1f成绩三：%-5.1f平均分：%-5.2f\n",q->num,q->name,q->score[0],q->score[1],(*q).score[2],q->aver);
         q++;
     }
 }

@@ -3,12 +3,12 @@
 #define Num 100
 struct student
 {
-    char num[20];//Ñ§ºÅ
-    char name[20];//ĞÕÃû
-    float score[3];//3ÃÅ¿Î³É¼¨
-    double aver;//Æ½¾ù³É¼¨
+    char num[20];//å­¦å·
+    char name[20];//å§“å
+    float score[3];//3é—¨è¯¾æˆç»©
+    double aver;//å¹³å‡æˆç»©
 };
-int n;//ÊıÁ¿
+int n;//æ•°é‡
 int main()
 {
     void input(struct student *stu);
@@ -24,24 +24,24 @@ void input(struct student *stu)
 {
     struct student *q=stu;
     int i;
-    printf("ÇëÊäÈëĞèÂ¼ÈëÍ¬Ñ§µÄÊıÁ¿£º");
+    printf("è¯·è¾“å…¥éœ€å½•å…¥åŒå­¦çš„æ•°é‡ï¼š");
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
-        printf("¿ªÊ¼ÊäÈëµÚ%d¸öÍ¬Ñ§µÄĞÅÏ¢£º",i+1);
+        printf("å¼€å§‹è¾“å…¥ç¬¬%dä¸ªåŒå­¦çš„ä¿¡æ¯ï¼š",i+1);
         scanf("%s%s%f%f%f",&q->num,&q->name,&q->score[0],&q->score[1],&(*q).score[2]);
         q->aver=(q->score[0]+q->score[1]+q->score[2])/3;
         q++;
     }
 }
-//°´ÕÕÆ½¾ù³É¼¨´Ó¸ßµ½µÍÅÅĞò£¬²ÉÓÃÑ¡ÔñÅÅĞò·¨£¬¸´ÔÓ¶ÈO(n^2)
+//æŒ‰ç…§å¹³å‡æˆç»©ä»é«˜åˆ°ä½æ’åºï¼Œé‡‡ç”¨é€‰æ‹©æ’åºæ³•ï¼Œå¤æ‚åº¦O(n^2)
 void sort(struct student *stu)
 {
     struct student max,*q=stu;
     int i,j,k;
     for(i=0;i<n;i++)
     {
-        k=i;//¼ÇÂ¼×î´óÖµµÄÏÂ±ê
+        k=i;//è®°å½•æœ€å¤§å€¼çš„ä¸‹æ ‡
         max=*(q+i);
         for(j=i;j<n;j++)
         {
@@ -61,10 +61,10 @@ void sort(struct student *stu)
 void print(struct student *stu)
 {
     struct student *q=stu;
-    printf("\n°´ÕÕÆ½¾ù³É¼¨´Ó¸ßµ½µÍÅÅĞòºóµÄ½á¹ûÈçÏÂ£º\n");
+    printf("\næŒ‰ç…§å¹³å‡æˆç»©ä»é«˜åˆ°ä½æ’åºåçš„ç»“æœå¦‚ä¸‹ï¼š\n");
     for(int i=0;i<n;i++)
     {
-        printf("Ñ§ºÅ£º%-15s ĞÕÃû£º%-10s³É¼¨1£º%-5.1f³É¼¨2£º%-5.1f³É¼¨Èı£º%-5.1fÆ½¾ù·Ö£º%-5.2lf\n",q->num,q->name,q->score[0],q->score[1],(*q).score[2],q->aver);
+        printf("å­¦å·ï¼š%-15s å§“åï¼š%-10sæˆç»©1ï¼š%-5.1fæˆç»©2ï¼š%-5.1fæˆç»©ä¸‰ï¼š%-5.1få¹³å‡åˆ†ï¼š%-5.2lf\n",q->num,q->name,q->score[0],q->score[1],(*q).score[2],q->aver);
         q++;
     }
 }

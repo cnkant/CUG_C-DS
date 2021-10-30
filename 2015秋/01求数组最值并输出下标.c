@@ -2,7 +2,7 @@
 int main()
 {
     int a[4][5],i,j,max_i,max_j,min_i,min_j,max,min;
-    printf("ÊäÈë20¸öÊı×Ö£º");
+    printf("è¾“å…¥20ä¸ªæ•°å­—ï¼š");
     for(i=0;i<4;i++)
         for(j=0;j<5;j++)
             scanf("%d",&a[i][j]);
@@ -26,7 +26,7 @@ int main()
             }
         }
     }
-    printf("×î´óÖµÎª%d,ÏÂ±êÎª(%d,%d)\n×îĞ¡ÖµÎª%d,ÏÂ±êÎª(%d,%d)\n",max,max_i,max_j,min,min_i,min_j);
+    printf("æœ€å¤§å€¼ä¸º%d,ä¸‹æ ‡ä¸º(%d,%d)\næœ€å°å€¼ä¸º%d,ä¸‹æ ‡ä¸º(%d,%d)\n",max,max_i,max_j,min,min_i,min_j);
 
     return 0;
 }

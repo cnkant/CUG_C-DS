@@ -1,4 +1,4 @@
-/*¼ÆËã2/1,3/2,5/3,8/5,13/8,21/13...µÄºÍ*/
+/*è®¡ç®—2/1,3/2,5/3,8/5,13/8,21/13...çš„å’Œ*/
 
 #include <stdio.h>
 int main()
@@ -6,10 +6,10 @@ int main()
     double calSequence(int);
     int n;
     double sum;
-    printf("ÊäÈënµÄÖµ£º");
+    printf("è¾“å…¥nçš„å€¼ï¼š");
     scanf("%d",&n);
     sum=calSequence(n);
-    printf("Ç°%dÏîºÍÎª%.2f\n",n,sum);
+    printf("å‰%dé¡¹å’Œä¸º%.2f\n",n,sum);
     return 0;
 }
 double calSequence(int n)
